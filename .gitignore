@@ -1,0 +1,13 @@
+.idea
+node_modules
+package-lock.json
+.env
+# Don't push a certificate
+ssl/*.pem
+# Don't push a cache
+shiku_cache
+# Some random stuff that i put on my workspace for some reason
+DC_KIANA_BOT
+ngx_package_slicer
+ngx_mediapack
+ngx_mediadecode_js
