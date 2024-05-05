@@ -3,15 +3,22 @@ const exHttp = express();
 const fs = require("fs")
 const path = require("path")
 const https = require("https")
+const cookieParser = require("cookie-parser")
+const prismaMiddle = require("../shiku_middle/db_middle")
 
 function InitHttpServer() {
+    // Load any middleware
+    exHttp.use(express.json()) // Parse JSON body from client
+    exHttp.use(express.urlencoded({extended: true})) // Parse FORM URL ENCODED body from client
+    exHttp.use(cookieParser(process.env.COOKIE_SIGN_SECRET)) // Parse the cookie from client and sign it
+    exHttp.use(prismaMiddle) // Prisma middleware
     // load the dynamic router first before running the server
     dynamicRouteHandler(exHttp)
-    // TODO:Convert a string from .env file into an actual boolean value
+    // Check if the config tell the server to run in SSL mode or not
     if (process.env.RUN_IN_SSL_MODE === "true") {
         // read private key and certificate
-        const pKey = fs.readFileSync(path.join(__dirname, "ssl", "private.pem"))
-        const cert = fs.readFileSync(path.join(__dirname, "ssl", "cert.pem"))
+        const pKey = fs.readFileSync(path.join(__dirname,"..", "ssl", "private.pem"))
+        const cert = fs.readFileSync(path.join(__dirname,"..", "ssl", "cert.pem"))
 
         const httpserver = https.createServer({
             key: pKey,
@@ -37,10 +44,12 @@ function dynamicRouteHandler(expressApp) {
             routeFiles.forEach(route => {
                 const rdata = require(path.join("../","router", subDir, route))
                 if (!rdata.disable) {
-                    // Dammm.. this is very nasty
-                    // expressApp[rdata.METHOD.toLowerCase()]("/", (...params) => rdata.execute(...params))
-                    // console.log(rdata?.ROUTEPARAMS ? `/${subDir}/${rdata.NAME ? rdata.NAME : ""}:${rdata.ROUTEPARAMS}` : `/${subDir}/${rdata.NAME ? rdata.NAME : ""}`)
-                    expressApp[rdata.METHOD.toLowerCase()](rdata.ROUTEPARAMS ? `/${subDir}/${rdata.NAME ? rdata.NAME : ""}:${rdata.ROUTEPARAMS}` : `/${subDir}/${rdata.NAME ? rdata.NAME : ""}`, (...params) => rdata.execute(...params))
+                    // Check if the NAME route have a params
+                    if (rdata.NAME.includes(":")) {
+                        const routeAndParams = rdata.NAME.split(":")
+                        expressApp[rdata.METHOD.toLowerCase()](`/${subDir}/${routeAndParams[0]}/:${routeAndParams[1]}`, (...params) => rdata.execute(...params))
+                    }
+                    expressApp[rdata.METHOD.toLowerCase()](rdata.NAME ? `/${subDir}/${rdata.NAME}` : `/${subDir}/`, (...params) => rdata.execute(...params))
                 }
             })
         })
