@@ -1,4 +1,6 @@
 const mailer = require("nodemailer")
+const jsdom = require("jsdom")
+const DOMParser = require('xmldom').DOMParser;
 const Dparser = new DOMParser()
 
 const transporter = mailer.createTransport({
@@ -12,12 +14,19 @@ const transporter = mailer.createTransport({
 })
 
 async function sendEmail(htmlStringOrData, destinationEmail, senderName, subject) {
-    const emailID = await transporter.sendMail({
-        from: `${senderName} <${process.env.SMTP_EMAIL_ADDRESS}>`,
-        to: destinationEmail,
-        subject,
-        //TODO: MAKE a conditional if the data is a HTML or not
-    })
+    try {
+        const email = await transporter.sendMail({
+            from: `${senderName} <${process.env.SMTP_EMAIL_ADDRESS}>`,
+            to: destinationEmail,
+            subject,
+            //TODO: MAKE a conditional if the data is a HTML or not
+            text: isAHtmlData(htmlStringOrData) ? null : htmlStringOrData,
+            html: isAHtmlData(htmlStringOrData) ? htmlStringOrData : null
+        })
+        return {message:`Successfully send message with id ${email.messageId}`, error:null}
+    } catch (sendError) {
+        return {message:null,error:`Error while try to send an email!\n ${sendError}`}
+    }
 }
 
 function isAHtmlData(data) {
@@ -28,3 +37,5 @@ function isAHtmlData(data) {
         return false
     }
 }
+
+module.exports.sendEmail = sendEmail

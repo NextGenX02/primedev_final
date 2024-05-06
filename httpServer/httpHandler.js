@@ -26,12 +26,12 @@ function InitHttpServer() {
             minVersion: "TLSv1.2",
             maxVersion: "TLSv1.3"
         },exHttp)
-        httpserver.listen(process.env.HTTPS_LISTEN_PORT, () => {
+        httpserver.listen(process.env.HTTPS_LISTEN_PORT,process.env.HTTP_HOSTNAME, () => {
             console.log(`Http server is running in SSL mode on port ${process.env.HTTPS_LISTEN_PORT}`)
         })
         return
     }
-    exHttp.listen(process.env.HTTP_LISTEN_PORT, () => {
+    exHttp.listen(process.env.HTTP_LISTEN_PORT,process.env.HTTP_HOSTNAME, () => {
         console.log(`Http server run at port ${process.env.HTTP_LISTEN_PORT}`)
     })
 }

@@ -4,7 +4,7 @@
 ## Some features need to be implemented before I call this project done,
 - [x] authentication.
 - [x] database connection
-- [ ] add email system
+- [ ] add email system (65% done)
 - [ ] user bio
 - [ ] update userprofile
 - [ ] make track upload
