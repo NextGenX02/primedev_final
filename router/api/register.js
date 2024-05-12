@@ -1,4 +1,4 @@
-const crypto = require("crypto")
+const {createBlowFishHash} = require("../../utils/passwordHash")
 const tokenGen = require('../../utils/tokenGen')
 const Mustache = require("mustache")
 const fs = require("fs")
@@ -10,10 +10,9 @@ module.exports = {
     METHOD: "post",
     disable: false,
     execute: async function (req,res) {
-        const hash256 = crypto.createHash("sha256")
         const username = req.body?.username
         const email = req.body?.email
-        const passwordHash = hash256.update(req.body.password).digest("hex");
+        const passwordHash = await createBlowFishHash(req.body?.password)
         const vToken = tokenGen()
 
         /* TODO: Add some recaptha to filter if is the real user or not */

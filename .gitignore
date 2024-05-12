@@ -14,3 +14,5 @@ ngx_mediapack
 ngx_mediadecode_js
 # Don't push prisma migrations files
 prisma/migrations
+test.js
+router/admin
