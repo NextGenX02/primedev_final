@@ -12,7 +12,7 @@ module.exports = {
         }
         const email = req.body?.email
         const password = req.body?.password
-        if (!validator.isEmail(email)) {
+        if (!validator?.isEmail(email)) {
             return res.status(400).json({Status: "Client Error", Message: "Email is not valid!"})
         }
         // Get the password hash base the user input email
