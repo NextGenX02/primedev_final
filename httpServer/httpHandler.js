@@ -39,20 +39,13 @@ function InitHttpServer() {
 function dynamicRouteHandler(expressApp) {
     try {
         const mainDir = fs.readdirSync(path.join("router"))
-        mainDir.forEach(subDir => {
-            const routeFiles = fs.readdirSync(path.join("router", subDir))
-            routeFiles.forEach(route => {
-                const rdata = require(path.join("../","router", subDir, route))
-                if (!rdata.disable) {
-                    // Check if the NAME route have a params
-                    if (rdata.NAME.includes(":")) {
-                        const routeAndParams = rdata.NAME.split(":")
-                        expressApp[rdata.METHOD.toLowerCase()](`/${subDir}/${routeAndParams[0]}/:${routeAndParams[1]}`, (...params) => rdata.execute(...params))
-                    }
-                    expressApp[rdata.METHOD.toLowerCase()](rdata.NAME ? `/${subDir}/${rdata.NAME}` : `/${subDir}/`, (...params) => rdata.execute(...params))
-                }
-            })
-        })
+        for (let subDir of mainDir) {
+            const routeFile = fs.readdirSync(path.join("router", subDir))
+            for (let rfile of routeFile) {
+                const rrF = require(`../router/${subDir}/${rfile}`);
+                expressApp.use(`/${subDir}`, rrF)
+            }
+        }
     } catch (error) {
         console.error(error)
         process.exit(1)
