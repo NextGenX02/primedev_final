@@ -1,49 +1,95 @@
 #EXTM3U
-
-#EXTINF:-1 group-title="KOREA OTT",TVN
+#EXTINF:-1 group-title="KoreaOTT",TVN
 https://media1.netgenx.site/TVN/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",KBS1
+#EXTINF:-1 group-title="KoreaOTT",KBS1
 https://media1.netgenx.site/KBS1/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",KBS2
+#EXTINF:-1 group-title="KoreaOTT",KBS2
 https://media1.netgenx.site/KBS2/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",SBS
+#EXTINF:-1 group-title="KoreaOTT",SBS
 https://media1.netgenx.site/SBS/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",SBS Plus
+#EXTINF:-1 group-title="KoreaOTT",SBS Plus
 https://media1.netgenx.site/SBS_Plus/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",KBS Life
+#EXTINF:-1 group-title="KoreaOTT",KBS Life
 https://media1.netgenx.site/KBS_Life/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",ANIMAX
+#EXTINF:-1 group-title="KoreaOTT",ANIMAX
 https://media1.netgenx.site/ANIMAX/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",JTBC
+#EXTINF:-1 group-title="KoreaOTT",JTBC
 https://media1.netgenx.site/JTBC/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",YTN
+#EXTINF:-1 group-title="KoreaOTT",YTN
 https://media1.netgenx.site/YTN/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",MBC
+#EXTINF:-1 group-title="KoreaOTT",MBC
 https://media1.netgenx.site/MBC/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",TV CHOSUN NEWS 24
+#EXTINF:-1 group-title="KoreaOTT",TV CHOSUN NEWS 24
 https://media1.netgenx.site/TV_CHOSUN_NEWS_24/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",ANIONE
+#EXTINF:-1 group-title="KoreaOTT",ANIONE
 https://media1.netgenx.site/ANIONE/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",MBN
+#EXTINF:-1 group-title="KoreaOTT",MBN
 https://media1.netgenx.site/MBN/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",TV CHOSUN
+#EXTINF:-1 group-title="KoreaOTT",TV CHOSUN
 https://media1.netgenx.site/TV_CHOSUN/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",THE-KPOP
+#EXTINF:-1 group-title="KoreaOTT",THE-KPOP
 https://media1.netgenx.site/THE-KPOP/index.m3u8
-
-#EXTINF:-1 group-title="KOREA OTT",MBC ON
+#EXTINF:-1 group-title="KoreaOTT",MBC ON
 https://media1.netgenx.site/MBC_ON/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",EBS 1
+https://media1.netgenx.site/EBS_1/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",EBS 2
+https://media1.netgenx.site/EBS_2/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",Yonhap News
+https://media1.netgenx.site/Yonhap_News/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",NATV
+https://media1.netgenx.site/NATV/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",Channel A
+https://media1.netgenx.site/Channel_A/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",YonhapTV
+https://media1.netgenx.site/YonhapTV/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",Mnet
+https://media1.netgenx.site/Mnet/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",MBC Drama
+https://media1.netgenx.site/MBC_Drama/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",MBC Every1
+https://media1.netgenx.site/MBC_Every1/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",KBS Joy
+https://media1.netgenx.site/KBS_Joy/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",K-Star
+https://media1.netgenx.site/K-Star/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",SmileTV Plus
+https://media1.netgenx.site/SmileTV_Plus/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",TV Chosun 2
+https://media1.netgenx.site/TV_Chosun_2/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",FunTV
+https://media1.netgenx.site/FunTV/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",MBC M
+https://media1.netgenx.site/MBC_M/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",KBS Story
+https://media1.netgenx.site/KBS_Story/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",EDGETV
+https://media1.netgenx.site/EDGETV/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",Channel J
+https://media1.netgenx.site/Channel_J/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",MBC Radio Entertaiment
+https://media1.netgenx.site/MBC_Radio_Entertaiment/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",WeLike
+https://media1.netgenx.site/WeLike/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",TVAsia Plus
+https://media1.netgenx.site/TVAsia_Plus/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",MBN Plus
+https://media1.netgenx.site/MBN_Plus/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",SBS Biz
+https://media1.netgenx.site/SBS_Biz/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",MBN News
+https://media1.netgenx.site/MBN_News/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",MBC Radio
+https://media1.netgenx.site/MBC_Radio/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",KBS News 24
+https://media1.netgenx.site/KBS_News_24/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",KNN
+https://media1.netgenx.site/KNN/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",CBS TV
+https://media1.netgenx.site/CBS_TV/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",JIBS
+https://media1.netgenx.site/JIBS/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",SBS Golf
+https://media1.netgenx.site/SBS_Golf/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",tvN Sports
+https://media1.netgenx.site/tvN_Sports/index.m3u8
