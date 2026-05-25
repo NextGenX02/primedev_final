@@ -1,5 +1,5 @@
 #EXTM3U
-#EXTINF:-1 group-title="KoreaOTT",TVN
+#EXTINF:-1 group-title="KoreaOTT",tvN
 https://media1.netgenx.site/TVN/index.m3u8
 #EXTINF:-1 group-title="KoreaOTT",KBS1
 https://media1.netgenx.site/KBS1/index.m3u8
@@ -93,3 +93,9 @@ https://media1.netgenx.site/JIBS/index.m3u8
 https://media1.netgenx.site/SBS_Golf/index.m3u8
 #EXTINF:-1 group-title="KoreaOTT",tvN Sports
 https://media1.netgenx.site/tvN_Sports/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",SBS News
+https://media1.netgenx.site/SBS_News/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",CJ ONSTYLE Plus
+https://media1.netgenx.site/CJ_ONSTYLE_Plus/index.m3u8
+#EXTINF:-1 group-title="KoreaOTT",Cartoonito
+https://media1.netgenx.site/Cartoonito/index.m3u8
